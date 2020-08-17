@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/tab1"
+        app:showAsAction="always"
+        android:icon="@drawable/image"
+        android:enabled="true"
+        android:checked="true"
+        android:title="지역별 사진보기" />
+
+    <item android:id="@+id/tab2"
+        app:showAsAction="always"
+        android:icon="@drawable/notice"
+        android:enabled="true"
+        android:title="알림"/>
+
+    <item android:id="@+id/tab3"
+        app:showAsAction="always"
+        android:icon="@drawable/mypage"
+        android:enabled="true"
+        android:title="마이페이지"/>
+
+    <item android:id="@+id/tab4"
+        app:showAsAction="always"
+        android:icon="@drawable/smlile"
+        android:enabled="true"
+        android:title="비어있는 페이지"/>
+
+</menu>
+
