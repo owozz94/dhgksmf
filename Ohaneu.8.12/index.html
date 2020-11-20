@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>신고게시판</h1>
+    
+    <!--<form id = "">
+    <input type = "text" name = "data" placeholder="나와라아">
+    </form>
+!-->
+    <div class="test">  
+      <h1>data 입력</h1>
+
+      
+    </div>
+    <p class = "image_test">
+      <image src = ""></image>
+    </p>
+
+        <form id="add-cafe-form">
+            <input type="text" name="category" placeholder="카테고리">
+            <input type="text" name="uid" placeholder="uid">
+            <button>유저 추가</button>
+        </form>
+
+        <div >
+          신고 게시판 영역
+          <div class="card-body">
+            <div class="table">
+              <table class="table table-bordered" id="dataTable" > <!--cellspacing : 셀들과의 간격-->
+                <thead>
+                  <tr>
+                    <th width="col-md-1">게시글 제목</th>
+                    <th class="">Category</th>
+                    <th class="">date</th>
+                    <th class="">uid</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>으어</td>
+                    <td>적절하지 않은 내용/사진</td>
+                    <td>2020년 11월 9일</td>
+                    <td>uid</td>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>내용</td>
+                    </tr>
+                  
+                  </tbody>
+            
+                
+                </tbody>
+              </table>
+            </div>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+
+
+      <script src="./app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
