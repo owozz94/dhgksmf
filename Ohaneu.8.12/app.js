@@ -31,29 +31,29 @@ var firebaseConfig = {
     appId: "1:993527267901:web:6a79facd864f6981326054",
     measurementId: "G-DN51SYWWDR"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var db = firebase.firestore();
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const storage = firebase.storage();
 
-  var storageRef = db.collection('post').doc('CyOmFmrmSusY41SNWcHN')
-  storageRef.child('local/gyeonggido/2020/20200920_3400').getDownloadURL().then(function(url) {
-    // `url` is the download URL for 'images/stars.jpg'
-  
-    // This can be downloaded directly:
-    var xhr = new XMLHttpRequest();
-    xhr.responseType = 'blob';
-    xhr.onload = function(event) {
-      var blob = xhr.response;
-    };
-    xhr.open('GET', url);
-    xhr.send();
-  
-    // Or inserted into an <img> element:
-    var img = document.getElementById('image_test');
-    img.src = url;
-  }).catch(function(error) {
-    console.log('Error getting documents', err);
-  });
+db.collection('post').doc('CyOmFmrmSusY41SNWcHN').get().then(({ url }) => {
+  // `url` is the download URL for 'images/stars.jpg'
+
+  // This can be downloaded directly:
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'blob';
+  xhr.onload = function(event) {
+    var blob = xhr.response;
+  };
+  xhr.open('GET', url);
+  xhr.send();
+
+  // Or inserted into an <img> element:
+  var img = document.getElementById('image_test');
+  img.src = url;
+}).catch(function(error) {
+  console.log('Error getting documents', err);
+});
 
 
 //특정 collection만 데이터만 갖고오기.
