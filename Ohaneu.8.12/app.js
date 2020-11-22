@@ -32,9 +32,9 @@ var firebaseConfig = {
     measurementId: "G-DN51SYWWDR"
   };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-const storage = firebase.storage();
+const app = firebase.initializeApp(firebaseConfig);
+const db = app.firestore();
+const storage = app.storage();
 
 db.collection('post').doc('CyOmFmrmSusY41SNWcHN').get().then(({ url }) => {
   // `url` is the download URL for 'images/stars.jpg'
